@@ -1,0 +1,39 @@
+body {
+    background-image: url('/assets/img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    width: 100%;
+}
+
+.content .kolom1 {
+    height: 35rem;
+}
+.content .judul {
+    font-size: 50px;
+}
+
+.container .kolom1 {
+    background-image: url('/assets/img/bg_potrait.jpg');
+    background-size: cover;
+    height: 90vh; 
+}
+
+.container .kolom2{
+    background-color: #FFF8C9;
+}
+form{
+    padding-top: 10rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    text-align: center;
+}
+.result h4 {
+    display: inline-block;
+    margin-right: 10px; 
+  }
+  
