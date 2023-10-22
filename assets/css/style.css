@@ -5,7 +5,9 @@ body {
     background-attachment: fixed; 
     width: 100%;
 }
-
+.logo-icon{
+    display: none;
+  }
 .content .kolom1 {
     height: 35rem;
 }

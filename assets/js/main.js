@@ -1,8 +1,14 @@
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const city = document.querySelector("input").value;
+  const cityInput = document.querySelector("input");
+  const city = cityInput.value.trim();
   const apiKey = "oURfeLvsbvhmTFUIH2qjNA==dOeOl3zMI1XmFZyB";
+
+  if (city === "") {
+    alert("Masukkan nama kota");
+    return;
+  }
 
   fetch(`https://api.api-ninjas.com/v1/weather?city=${city}`, {
     headers: {
