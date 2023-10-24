@@ -1,6 +1,18 @@
+let debounceTimeout;
+
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
+  if (debounceTimeout) {
+    clearTimeout(debounceTimeout);
+  }
+
+  debounceTimeout = setTimeout(() => {
+    fetchWeatherData();
+  }, 2000);
+});
+
+function fetchWeatherData() {
   const cityInput = document.querySelector("input");
   const city = cityInput.value.trim();
   const apiKey = "oURfeLvsbvhmTFUIH2qjNA==dOeOl3zMI1XmFZyB";
@@ -46,4 +58,4 @@ document.getElementById("form").addEventListener("submit", function (event) {
       alert(error.message);
       console.error("Error:", error);
     });
-});
+}
